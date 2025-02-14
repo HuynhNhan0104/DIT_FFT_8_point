@@ -338,18 +338,66 @@ initial begin
     x6_real <= 32'hFFEC_63D8; x6_img <= 32'hFF82_6E15;
     x7_real <= 32'hFF7C_0000; x7_img <= 32'hFFF1_0CCD;
     #200;
-    // // testcase 10: general 
-    // // input: 
-    // // expected:
-    // x0_real <= 32'h0000_0000; x0_img <= 32'h0003_0000;
-    // x1_real <= 32'h0000_0000; x1_img <= 32'h0003_0000;
-    // x2_real <= 32'h0000_0000; x2_img <= 32'h0003_0000;
-    // x3_real <= 32'h0000_0000; x3_img <= 32'h0003_0000;
-    // x4_real <= 32'h0000_0000; x4_img <= 32'h0003_0000;
-    // x5_real <= 32'h0000_0000; x5_img <= 32'h0003_0000;
-    // x6_real <= 32'h0000_0000; x6_img <= 32'h0003_0000;
-    // x7_real <= 32'h0000_0000; x7_img <= 32'h0003_0000;
+    // testcase 10: general 
+    // input: 
+    // x0 = 47.23       + j* -104.07   = 002F3AE1       + j* FF97EE15
+    // x1 = 185.66      + j* 163.59    = 00B9A8F5       + j* 00A3970A
+    // x2 = -192.09     + j* -32.27    = FF3FE8F6       + j* FFDFBAE2
+    // x3 = -81.88      + j* -99.09    = FFAE1EB9       + j* FF9CE8F6
+    // x4 = -174.45     + j* 40.10     = FF518CCD       + j* 00281999
+    // x5 = -175.04     + j* -184.48   = FF50F5C3       + j* FF47851F
+    // x6 = 35.76       + j* -156.15   = 0023C28F       + j* FF63D99A
+    // x7 = -131.21     + j* 55.88     = FF7CCA3E       + j* 0037E147
+    // expected:
+    // y0 = -486.02     + j* -316.49   = FE19FAE2       + j* FEC38290
+    // y1 = 702.27      + j* 149.45    = 02BE462F       + j* 009572B0
+    // y2 = 51.43       + j* -99.26    = 00336E14       + j* FF9CBD71
+    // y3 = 14.17       + j* -1017.66  = 000E2BA4       + j* FC06578F
+    // y4 = -81.08      + j* -188.29   = FFAEEB86       + j* FF43B5C3
+    // y5 = -11.15      + j* 17.91     = FFF4D88A       + j* 0011E978
+    // y6 = 6.79        + j* 348.16    = 0006CA3D       + j* 015C28F5
+    // y7 = 181.43      + j* 273.62    = 00B56DF4       + j* 01119E34
+    x0_real <= 32'h002F_3AE1; x0_img <= 32'hFF97_EE15;
+    x1_real <= 32'h00B9_A8F5; x1_img <= 32'h00A3_970A;
+    x2_real <= 32'hFF3F_E8F6; x2_img <= 32'hFFDF_BAE2;
+    x3_real <= 32'hFFAE_1EB9; x3_img <= 32'hFF9C_E8F6;
+    x4_real <= 32'hFF51_8CCD; x4_img <= 32'h0028_1999;
+    x5_real <= 32'hFF50_F5C3; x5_img <= 32'hFF47_851F;
+    x6_real <= 32'h0023_C28F; x6_img <= 32'hFF63_D99A;
+    x7_real <= 32'hFF7C_CA3E; x7_img <= 32'h0037_E147;
     #200;
+    // testcase 10: general 
+    // input:
+    // x0 = 117.25      + j* 185.34    = 00754000       + j* 00B9570A
+    // x1 = 103.19      + j* -86.87    = 006730A3       + j* FFA92148
+    // x2 = -114.02     + j* -63.04    = FF8DFAE2       + j* FFC0F5C3
+    // x3 = 161.47      + j* 45.54     = 00A17851       + j* 002D8A3D
+    // x4 = -161.28     + j* 125.79    = FF5EB852       + j* 007DCA3D
+    // x5 = -196.94     + j* -75.98    = FF3B0F5D       + j* FFB4051F
+    // x6 = 141.39      + j* 187.21    = 008D63D7       + j* 00BB35C2
+    // x7 = -14.90      + j* -5.04     = FFF1199A       + j* FFFAF5C3
+    // expected:
+    // y0 = 36.16       + j* 312.95    = 002428F5       + j* 0138F333
+    // y1 = 143.86      + j* -65.44    = 008FDB4A       + j* FFBE8ECA
+    // y2 = -274.75     + j* 427.28    = FEED4000       + j* 01AB47AE
+    // y3 = 469.33      + j* -489.33   = 01D55562       + j* FE16AB63
+    // y4 = -69.48      + j* 557.65    = FFBA851F       + j* 022DA666
+    // y5 = -87.30      + j* 695.36    = FFA8B412       + j* 02B75CBB
+    // y6 = 131.95      + j* -53.36    = 0083F333       + j* FFCAA3D8
+    // y7 = 588.23      + j* 97.61     = 024C39F9       + j* 00619C4B
+
+    x0_real <= 32'h0075_4000; x0_img <= 32'h00B9_570A;
+    x1_real <= 32'h0067_30A3; x1_img <= 32'hFFA9_2148;
+    x2_real <= 32'hFF8D_FAE2; x2_img <= 32'hFFC0_F5C3;
+    x3_real <= 32'h00A1_7851; x3_img <= 32'h002D_8A3D;
+    x4_real <= 32'hFF5E_B852; x4_img <= 32'h007D_CA3D;
+    x5_real <= 32'hFF3B_0F5D; x5_img <= 32'hFFB4_051F;
+    x6_real <= 32'h008D_63D7; x6_img <= 32'h00BB_35C2;
+    x7_real <= 32'hFFF1_199A; x7_img <= 32'hFFFA_F5C3;
+    #200;
+
+
+
     $finish;
 end
     

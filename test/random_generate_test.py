@@ -11,7 +11,7 @@ def print_testcase(complex_numbers, char = "x",width = 8):
 
 def test():
     # Dùng thời gian hiện tại làm seed
-    complex_numbers = generate_testcase(-200,0,-200, 0,8)
+    complex_numbers = generate_testcase(-200,200,-200, 200,8)
     print_testcase(complex_numbers)
 
     
