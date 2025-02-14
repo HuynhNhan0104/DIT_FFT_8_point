@@ -1,5 +1,5 @@
 import numpy as np
-from convert_complex_fixed_point import *
+from convert_fixed_point import *
 from random_generate_test import *
 
 def FFT(xn):

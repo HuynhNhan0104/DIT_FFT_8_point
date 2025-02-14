@@ -1,6 +1,6 @@
 import numpy as np
 import time
-from convert_complex_fixed_point import *
+from convert_fixed_point import *
 
 
 
