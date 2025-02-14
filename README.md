@@ -39,9 +39,9 @@ DIT_FFT_8_point
 * source: verilog file of all module
 * test: python files which are used to test and generate testcase and result of FFT
 * testbench: verilog file of all testbench module 
-##
 ## Testing
-This project use Iverilog to complie an using GTKWay to simulation,
+This project use Iverilog to complie an using GTKWay to simulation.
+You should note that the output values from the Python code are not exactly the same as those from the Verilog simulation; there may be slight discrepancies since Python represents decimal numbers more accurately.
 * To compile testbench module use:
 ``` bash
     iverilog -o fft_8p_tb.vvp testbench/fft_8p_tb.v source/fft_8p.v  source/butterfly_radix2.v source/multiplier_complex.v
