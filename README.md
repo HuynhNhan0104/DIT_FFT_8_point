@@ -16,7 +16,7 @@ you can view more at [this link](https://www.sciencedirect.com/topics/computer-s
 ![Butterfly Diagram](https://www.researchgate.net/profile/Yun-Chen-41/publication/224358754/figure/fig2/AS:393627625902104@1470859547786/Signal-flow-graph-of-an-8-point-DIT-FFT.png)
 
 ## Directory Structure
-.
+.DIT_FFT_8_point
 ├── README.md
 ├── source
 │   ├── butterfly_radix2.v
