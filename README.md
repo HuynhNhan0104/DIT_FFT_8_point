@@ -61,3 +61,5 @@ This project use Iverilog to complie an using GTKWay to simulation,
     python random_generate_test.py
 ```
 ## GTKWay
+![GTKway](https://github.com/user-attachments/assets/141a73fb-5ee2-413a-b71e-9fd923b1e620)
+
